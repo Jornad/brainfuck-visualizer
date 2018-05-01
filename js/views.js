@@ -9,6 +9,13 @@ var CellView = Backbone.View.extend({
     }
 });
 
+var mod = function(num,topnum){
+	while(num>=topnum){
+		num-=topnum;
+	}
+	return num;
+}
+
 var PointerView = Backbone.View.extend({
     el: "div.pointer",
     initialize: function (options) {
@@ -17,8 +24,8 @@ var PointerView = Backbone.View.extend({
     },
     render: function () {
         this.$el.animate({
-            "margin-left": this.model.get("index") * this.$el.width()
-        }, 30);
+            "margin-left": mod(this.model.get("index"),28) * this.$el.width(),
+        }, 0.1);
         return this;
     }
 });
@@ -47,7 +54,7 @@ var TapeView = Backbone.View.extend({
 
 
 var InterpreterView = Backbone.View.extend({
-    delay: "90",
+    delay: "0.1",
     el: "#interpreter",
     initialize: function (options) {
         this.pointer = options.pointer;
@@ -195,10 +202,10 @@ var InterpreterView = Backbone.View.extend({
     changeDelay: function () {
         if (this.interval) {
             this.pause();
-            this.delay = $("#delay").val();
+            this.delay = $("#delay").val()-29.9;
             this.loop();
         } else {
-            this.delay = $("#delay").val();
+            this.delay = $("#delay").val()-29.9;
         }
     }
 });
