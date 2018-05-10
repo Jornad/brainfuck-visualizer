@@ -9,7 +9,6 @@
     <script type="text/javascript" src="js/interpreter.js"></script>
     <script type="text/javascript" src="js/views.js"></script>
     <script type="text/javascript" src="js/models.js"></script>
-	<body background="science_zorn.png">
 </head>
 <body>
 
@@ -17,14 +16,14 @@
 
     </header>
 
-    <div id="interpreter" style="background-color:white">
+    <div id="interpreter">
         <section class="machine">
             <ul class="tape">
             </ul>
             <div class="pointer"><em></em></div>
         </section>
         <section class="editor">
-            <div class="actions" style="background-color:white">
+            <div class="actions">
                 <a class="button" href="#" id="run">Run</a>
                 <a class="button" href="#" id="first-step">Step</a>
                 <a class="button hidden" href="#" id="stop">Stop</a>
@@ -35,15 +34,15 @@
                     <label for="delay">Delay</label>
                     <input id="delay" value="100" type="range" step="30" min="30" max="300"/>
                 </div>
-                <div id="optimize-box" style="background-color:white">
+                <div id="optimize-box">
                     <label for="optimize">Optimize?</label>
                     <input id="optimize" type="checkbox"/>
                 </div>
-                <div id="exclaim-box" style="background-color:white">
+                <div id="exclaim-box">
                     <label for="exclaim">!</label>
                     <input id="exclaim" type="checkbox"/>
                 </div>
-                <div id="input-box" style="background-color:white">
+                <div id="input-box">
                     <label>Waiting for input</label>
                     <input type="text" id="input" maxlength="1"/>
                 </div>
@@ -75,7 +74,7 @@
         </section>
     </div>
 
-    <div id="info" style="background-color:white">
+    <section id="info">
         <h3>Quick Reference</h3>
 
         <table>
@@ -121,7 +120,7 @@
         <p><a href="http://en.wikipedia.org/wiki/Brainfuck">http://en.wikipedia.org/wiki/Brainfuck</a></p>
 
 
-    </div>
+    </section>
 
     <script type="text/javascript">
         $(function () {
