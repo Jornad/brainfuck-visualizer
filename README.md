@@ -1,3 +1,5 @@
+Version of https://github.com/fatiherikli/brainfuck-visualizer that has removed speed limitations as my friends and I were writting complex programs.
+
 ### Brainfuck Visualizer
 
 Javascript Brainfuck Interpreter + Visualizer
